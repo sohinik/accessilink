@@ -1,0 +1,331 @@
+<!DOCTYPE HTML> 
+
+<html>  
+<head>
+
+<style>
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+
+@font-face {
+  font-family: Raleway;
+  src: url(static/Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: Raleway-Light;
+  src: url(static/Raleway/Raleway-Light.ttf);
+}
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(static/Raleway/Raleway-Bold.ttf);
+}
+
+
+/*////////////////////////////////////////
+*/
+
+/*
+ * Container style
+ */
+ .ps {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+
+.ps__rail-y {
+  display: none;
+  opacity: 0;
+  transition: background-color .2s linear, opacity .2s linear;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  width: 15px;
+  /* there must be 'right' or 'left' for ps__rail-y */
+  right: 0;
+  /* please don't change 'position' */
+  position: absolute;
+}
+
+.ps--active-x > .ps__rail-x,
+.ps--active-y > .ps__rail-y {
+  display: block;
+  background-color: transparent;
+}
+
+.ps:hover > .ps__rail-x,
+.ps:hover > .ps__rail-y,
+.ps--focus > .ps__rail-x,
+.ps--focus > .ps__rail-y,
+.ps--scrolling-x > .ps__rail-x,
+.ps--scrolling-y > .ps__rail-y {
+  opacity: 0.6;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+
+.limiter {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.wrap-table100 {
+  width: 1170px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+
+table {
+  width: 100%;
+}
+
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+  border: 1px #F7CA18;
+}
+
+.column1 {
+  width: 40%;
+  padding-left: 40px;
+}
+
+.column2 {
+  width: 60%;
+}
+
+.table100-head th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.table100-body td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/*==================================================================
+[ Fix header ]*/
+.table100 {
+  position: relative;
+  padding-top: 60px;
+  background-color: #020122;
+}
+
+.table100-head {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.table100-body {
+  max-height: 585px;
+  overflow: auto;
+}
+
+
+
+/*==================================================================
+[ Ver2 ]*/
+
+.table100.ver2 .table100-head {
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.table100.ver2 th {
+  font-family: Raleway-Bold;
+  font-size: 18px;
+  color: #D43900;
+  line-height: 1.4;
+  background-color: transparent;
+}
+
+.table100.ver2 td {
+  font-family: Raleway;
+  font-size: 15px;
+  color: #F7CA18;
+  line-height: 1.4;
+}
+
+.table100.ver2 .table100-body tr {
+  border-bottom: 1px solid #F7CA18;
+}
+
+th.hover {
+  color: #020122;
+  background-color: #FFFFFF
+}
+
+/*---------------------------------------------*/
+
+.table100.ver2 {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.table100.ver2 .ps__rail-y {
+  right: 5px;
+}
+
+.table100.ver2 .ps__rail-y::before {
+  background-color: #ebebeb;
+}
+
+.table100.ver2 .ps__rail-y .ps__thumb-y::before {
+  background-color: #cccccc;
+}
+
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 100px;
+    background: linear-gradient(#F7CA18 100px, transparent 100px 100%) fixed no-repeat
+      0 0;
+    z-index: 10;
+  }
+ @supports (-webkit-overflow-scrolling: touch) {
+    .header{
+    background-attachment: scroll;
+    }
+  }
+
+
+
+
+
+h5{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+    <header class="header" style="display: flex;">
+            <h5 style="color: #020122; font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h5>
+    </header>
+
+    <div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<div class="table100-head" style="z-index: 2;">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Class name</th>
+									<th class="cell100 column2">Type</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll" style="z-index: 0;">
+						<table>
+							<tbody>
+								{% for key, value in result['internalURLS'].items() %}
+                                <tr>
+                                    <th style="float: left; margin: 5% auto; margin-left: 5%"> {{ key }} </th>
+                                    <td> {{ value }} </td>
+                                </tr>
+                                {% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+        
+			<div class="wrap-table100" style="margin-top: 5%;">
+				<div class="table100 ver2 m-b-110">
+					<div class="table100-head" style="z-index: 2;">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Class name</th>
+									<th class="cell100 column2">Type</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll" style="z-index: 0;">
+						<table>
+							<tbody>
+								{% for key, value in result['externalURLS'].items() %}
+                                <tr>
+                                    <th style="float: left; margin: 5% auto; margin-left: 5%"> {{ key }} </th>
+                                    <td> {{ value }} </td>
+                                </tr>
+                                {% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
