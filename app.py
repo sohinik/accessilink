@@ -90,6 +90,7 @@ def getLinks(url, t):
     # print("---------")
     return {'internalURLS': internal_urls,
             'externalURLS': external_urls,
+            'URL': url
             } #'allURLS': urls
 
 

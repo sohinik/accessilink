@@ -7,7 +7,6 @@
 
 
 
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -127,10 +126,11 @@ th, td {
 .column1 {
   width: 40%;
   padding-left: 40px;
+  padding-right: 4px;
 }
 
 .column2 {
-  width: 60%;
+  width: 66%;
 }
 
 .table100-head th {
@@ -178,7 +178,7 @@ th, td {
 
 .table100.ver2 th {
   font-family: Raleway-Bold;
-  font-size: 18px;
+  font-size: 22px;
   color: #D43900;
   line-height: 1.4;
   background-color: transparent;
@@ -186,7 +186,7 @@ th, td {
 
 .table100.ver2 td {
   font-family: Raleway;
-  font-size: 15px;
+  font-size: 19px;
   color: #F7CA18;
   line-height: 1.4;
 }
@@ -253,6 +253,61 @@ h5{
 }
 
 
+h6{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 2%;
+    color: #020122;
+    font-size: 24px;
+}
+
+
+
+.btn-group button {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #F7CA18; /* Green background */
+    border: none; /* Green border */
+    cursor: pointer; /* Pointer/hand icon */
+    float: right; /* Float the buttons side by side */
+
+    height: 100px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    color: #020122;
+  }
+  @supports (-webkit-overflow-scrolling: touch) {
+    .btn-group{
+    background-attachment: scroll;
+    }
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #D43900;
+    color: #F7CA18;
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+  }
+
+
 
 </style>
 
@@ -261,11 +316,17 @@ h5{
 <body>
     <header class="header" style="display: flex;">
             <h5 style="color: #020122; font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h5>
+            <div class="btn-group" style="display: inline-block; margin: 0 auto;">
+                <a href="/"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Home</button></a>
+            </div>
     </header>
+
+    <h6 style="margin-top: 2%; font-weight: bold; font-size: 30px;">Main URL: {{ result['URL'] }} </h6>
 
     <div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
+        <h6 style="">Internal URLS</h6>
 				<div class="table100 ver2 m-b-110">
 					<div class="table100-head" style="z-index: 2;">
 						<table>
@@ -295,7 +356,9 @@ h5{
 
 
         
+      
 			<div class="wrap-table100" style="margin-top: 5%;">
+        <h6>External URLS</h6>
 				<div class="table100 ver2 m-b-110">
 					<div class="table100-head" style="z-index: 2;">
 						<table>
@@ -325,6 +388,16 @@ h5{
 		</div>
 		
 	</div>
+
+  <div id="iframeDisplay" style="margin-top:50px;"></div>  
+
+
+  <script>
+        function displayIframe(source) {
+            var sour = source;
+            document.getElementById("iframeDisplay", sour).innerHTML = "<iframe src="+sour+" height=\"500\" width=\"100%\" name=\"iframe_a\"></iframe>";
+        }
+    </script>
 
 
 </body>

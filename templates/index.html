@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" "styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -36,369 +37,347 @@
 
     <style>
 
-
-
     @font-face {
-    font-family: Raleway;
-    src: url(static/Raleway/Raleway-Medium.ttf);
-}
-@font-face {
-    font-family: Raleway-Light;
-    src: url(static/Raleway/Raleway-Light.ttf);
-}
-@font-face {
+        font-family: Raleway;
+        src: url(static/Raleway/Raleway-Medium.ttf);
+    }
+    @font-face {
+        font-family: Raleway-Light;
+        src: url(static/Raleway/Raleway-Light.ttf);
+    }
+    @font-face {
+        font-family: Raleway-Bold;
+        src: url(static/Raleway/Raleway-Bold.ttf);
+    }
+
+
+
+    html, body, div {
+        /* Height and width fallback for older browsers. */
+        height: 100%;
+        width: 100%;
+
+        /* Set the height to match that of the viewport. */
+        height: 100vh;
+
+        /* Set the width to match that of the viewport. */
+        width: 100vw;
+
+        /* Remove any browser-default margins. */
+        margin: 0;
+    }
+
+    h1{
     font-family: Raleway-Bold;
-    src: url(static/Raleway/Raleway-Bold.ttf);
-}
-
-
-
-html, body, div {
-    /* Height and width fallback for older browsers. */
-    height: 100%;
-    width: 100%;
-
-    /* Set the height to match that of the viewport. */
-    height: 100vh;
-
-    /* Set the width to match that of the viewport. */
-    width: 100vw;
-
-    /* Remove any browser-default margins. */
-    margin: 0;
-}
-
-
-
-
-h1{
-font-family: Raleway-Bold;
-font-style: normal;
-font-weight: bold;
-text-align: center;
-
-color: #020122;
-}
-
-
-
-
-h2{
-    font-family: Raleway-Light;
     font-style: normal;
     font-weight: bold;
     text-align: center;
-    
+
     color: #020122;
-}
-
-
-
-h3{
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    text-align: left;
-    
-    color: #020122;
-}
-
-
-
-h4{
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    text-align: left;
-    
-    color: #020122;
-}
-
-
-
-h5{
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    text-align: left;
-}
-
-h6{
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    text-align: right;
-}
-
-
-
-.triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 40px solid #F7CA18;
-    transform: translateX(-50%);
-    margin-left: 95%;
-    margin-top: 20%
-}
-
-
-
-
-
-
-.tryMenu {
-    width: 100%;
-    height: 100%;
-  	background-size: cover;
-}
-
-
-.bottomMenu {
-    width: 100%;
-    height: 100%;
-  	background-size: cover;
-}
-
-
-
-.scroll-container,
-.scroll-area {
-  width:100%;
-  height: 100%;
-}
-
-.scroll-container {
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-  scroll-snap-align: start;
-}
-
-.scroll-container,
-.scroll-area {
-  margin: 0 auto;
-}
-
-.scroll-area {
-  display: flex;
-  color: white;
-}
-
-.scroll-area:nth-of-type(1) {
-  background: #FFFFFF;
-}
-
-.scroll-area:nth-of-type(2) {
-  background: #020122;
-}
-
-.scroll-area:nth-of-type(3) {
-  background: #FFFFFF;
-}
-
-.scroll-area:nth-of-type(4) {
-  background: #020122;
-}
-
-
-
-
-
-
-.header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    min-height: 100px;
-    background: linear-gradient(#F7CA18 100px, transparent 100px 100%) fixed no-repeat
-      0 0;
-    z-index: 10;
-  }
-  @supports (-webkit-overflow-scrolling: touch) {
-    .header{
-    background-attachment: scroll;
     }
-  }
 
-
-
-
-#rectangle2 {
-    position: fixed;
-    width: 350px;
-    height: 138px;
-    left: 422px;
-    top: 2px;
-
-    background: #020122;
-}
-
-
-
-
-.btn-group button {
-    position: -webkit-sticky;
-    position: sticky;
-    background-color: #F7CA18; /* Green background */
-    border: none; /* Green border */
-    cursor: pointer; /* Pointer/hand icon */
-    float: right; /* Float the buttons side by side */
-
-    height: 100px;
-
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    text-align: center;
-    color: #020122;
-  }
-  @supports (-webkit-overflow-scrolling: touch) {
-    .btn-group{
-    background-attachment: scroll;
+    h2{
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        
+        color: #020122;
     }
-  }
-  
-  /* Clear floats (clearfix hack) */
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
-  
-  /* Add a background color on hover */
-  .btn-group button:hover {
-    background-color: #D43900;
-    color: #F7CA18;
-  }
 
+    h3{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        text-align: left;
+        
+        color: #020122;
+    }
 
+    h4{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        text-align: left;
+        
+        color: #020122;
+    }
 
+    h5{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        text-align: left;
+    }
 
+    h6{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        text-align: right;
+    }
 
+    .triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid #F7CA18;
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
 
-.rectangle3 {
-    height: 400px;
-    width: 900px;
-    background: #D43900;
-}
+    .triangle-down:hover {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid #D43900;
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
 
-.rectangle3:hover {
-    -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    background-image: url(static/palette.png);
-    background-repeat:no-repeat;
-    background-size:690px 100%;
-    background-position: center right;
-}
+    .tryMenu {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
 
+    .bottomMenu {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
 
-.rectangle4 {
-    height: 180px;
-    width: 210px;
-    background: #FFFFFF;
-}
+    .scroll-container,
+    .scroll-area {
+      width:100%;
+      height: 100%;
+    }
 
- 
-.rectangle32 {
-    height: 400px;
-    width: 900px;
-    background: #D43900;
-}
+    .scroll-container {
+      overflow: auto;
+      scroll-snap-type: y mandatory;
+    }
 
-img{
-    border:0;
-    outline: none;
-}
+    .scroll-area {
+      scroll-snap-align: start;
+    }
 
-.rectangle32:hover{
-    -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    background-image: url(static/howitworks.png);
-    background-repeat:no-repeat;
-    background-size:687px 80%;
-    background-position: center right;
-}
+    .scroll-container,
+    .scroll-area {
+      margin: 0 auto;
+    }
 
-.rectangle33 {
-    height: 400px;
-    width: 900px;
-    background: #D43900;
-}
+    .scroll-area {
+      display: flex;
+      color: white;
+    }
 
-.rectangle33:hover {
-    -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
-    background-image: url(static/ourinspiration.png);
-    background-repeat:no-repeat;
-    background-size:687px 80%;
-    background-position: center right;
-}
+    .scroll-area:nth-of-type(1) {
+      background: #FFFFFF;
+    }
 
+    .scroll-area:nth-of-type(2) {
+      background: #020122;
+    }
 
+    .scroll-area:nth-of-type(3) {
+      background: #FFFFFF;
+    }
 
+    .scroll-area:nth-of-type(4) {
+      background: #020122;
+      background-image: url(static/info.png);
+        background-repeat:no-repeat;
+        background-size:70% 85%;
+        background-position: bottom center;
+    }
 
+    .header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        min-height: 100px;
+        background: linear-gradient(#F7CA18 100px, transparent 100px 100%) fixed no-repeat
+          0 0;
+        z-index: 10;
+      }
+      @supports (-webkit-overflow-scrolling: touch) {
+        .header{
+        background-attachment: scroll;
+        }
+      }
 
+    #rectangle2 {
+        position: fixed;
+        width: 350px;
+        height: 138px;
+        left: 422px;
+        top: 2px;
 
-input[type=url], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    float: right;
-  }
+        background: #020122;
+    }
 
-input[type=number], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    float: right;
-  }
-  
-  input[type=submit] {
-    width: 20%;
-    background-color: #D43900;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: Raleway-Bold;
-    font-size: 24px;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #FFFFFF;
-    color: #D43900;
-    border: #D43900;
-    border-radius: 4px;
-    font-family: Raleway-Bold;
-    font-size: 24px;
-  }
+    .btn-group button {
+        position: -webkit-sticky;
+        position: sticky;
+        background-color: #F7CA18; /* Green background */
+        border: none; /* Green border */
+        cursor: pointer; /* Pointer/hand icon */
+        float: right; /* Float the buttons side by side */
 
+        height: 100px;
 
-    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        color: #020122;
+      }
+      @supports (-webkit-overflow-scrolling: touch) {
+        .btn-group{
+        background-attachment: scroll;
+        }
+      }
+      
+      /* Clear floats (clearfix hack) */
+      .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .btn-group button:not(:last-child) {
+        border-right: none; /* Prevent double borders */
+      }
+      
+      /* Add a background color on hover */
+      .btn-group button:hover {
+        background-color: #D43900;
+        color: #F7CA18;
+        -webkit-box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+        -moz-box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+        box-shadow: -1px 9px 40px -12px rgba(212,57,0, 0.75);
+      }
 
+    .rectangle3 {
+        height: 400px;
+        width: 900px;
+        background: #D43900;
+        background-image: url(static/palette.png);
+        background-repeat:no-repeat;
+        background-size:690px 100%;
+        background-position: center right;
+    }
 
+    .rectangle3:hover {
+        -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+    }
+
+    .rectangle4 {
+        height: 180px;
+        width: 222px;
+        background: #FFFFFF;
+    }
+
+    .rectangle32 {
+        height: 400px;
+        width: 900px;
+        background: #D43900;
+        background-image: url(static/howitworks.png);
+        background-repeat:no-repeat;
+        background-size:680px 80%;
+        background-position: center right;
+    }
+
+    img{
+        border:0;
+        outline: none;
+    }
+
+    .rectangle32:hover{
+        -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+    }
+
+    .rectangle33 {
+        height: 400px;
+        width: 900px;
+        background: #D43900;
+        background-image: url(static/ourinspiration.png);
+        background-repeat:no-repeat;
+        background-size:670px 80%;
+        background-position: center right;
+    }
+
+    .rectangle33:hover {
+        -webkit-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+        box-shadow: -1px 9px 40px -12px rgba(255, 255, 255, 0.75);
+    }
+
+    input[type=url], select {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        float: right;
+      }
+
+    input[type=number], select {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        float: right;
+      }
+      
+      input[type=submit] {
+        width: 20%;
+        background-color: #D43900;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: Raleway-Bold;
+        font-size: 24px;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #FFFFFF;
+        color: #D43900;
+        border: #D43900;
+        border-radius: 4px;
+        font-family: Raleway-Bold;
+        font-size: 24px;
+      }
+
+      .rectangle34 {
+        height: 200px;
+        width: 300px;
+        background: #FFFFFF;
+        background-image: url(static/logo.png);
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-position: center right;
+    }
+
+    .imgContainer{
+        float:left;
+    }
 
 
     </style>
@@ -410,68 +389,90 @@ input[type=number], select {
     <div class="scroll-container" id="main-container">
         <div class="scroll-area"  id="Main" style="flex-direction: column;">
 
-            <h1 style="font-size: 96px; margin-top: 170px; margin-bottom: 0px"> AccessiLink </h1>
-            <h1 style="font-size: 48px; margin-top: 20px; margin-bottom: 0px"> Making links findable eom </h1>
-            <h2 style="font-size: 48px; margin-top: 10px; margin-bottom: 0px"> About Try It Info </h2>
+            <h1 style="font-size: 96px; margin-top: 100px; margin-bottom: 0px"> AccessiLink </h1>
+            <h1 style="font-size: 40px; margin-top: 20px; margin-bottom: 0px"> A tool to help visually impaired users </h1>
+            <h1 style="font-size: 40px; margin-top: 0px; margin-bottom: 0px">  find all available links on a page </h1>
+            <h1 style="font-size: 40px; margin-top: 0px; margin-bottom: 0px"> in a WCAG AA-conformant style. </h1>
 
-            <a href="#About"><div class="triangle-down" style="align:center;"></div></a>
+            <div class="rectangle34" style="margin: 0 auto; margin-top: 2%;"></div>
+
+            <h1 style="font-size: 40px; margin-top: 5%; margin-bottom: 0px"> Try it! </h1>
+
+            <a href="#About"><div class="triangle-down" style="align:center; margin-top: 1%"></div></a>
         </div>
 
-        
 
         <div class="scroll-area" id="About" style="justify-content: center; flex-direction: column;">
-        <header class="header" style="display: flex;">
-            <h3 style="font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h3>
-            <div class="btn-group" style="display: inline-block; margin: 0 auto;">
-                <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Info</button></a>
-                <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Try It</button></a>
-                <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: #020122;">About</button></a>
-            </div>
-        </header>
-        <div class="rectangle3" style="margin: 0 auto; margin-bottom:20px;">
-        <div class="rectangle4"> <h5 style="color=#FFFFFF; font-size:24px;">space</h5> <h1>Color Choices</h1></div>
-        </div>
-        <div class="rectangle32" style="margin: 0 auto; margin-bottom:20px;">
-        <div class="rectangle4"><h5 style="color=#FFFFFF; font-size:24px;">space</h5> <h1>How It Works</h1></div>
-        
-        </div>
-        <div class="rectangle33" style="margin: 0 auto; margin-bottom:30px;">
-        <div class="rectangle4"> <h5 style="color=#FFFFFF font-size:40px;">space</h5> <h1>Our Inspiration</h1></div>
-        </div>
+          <header class="header" style="display: flex;">
+              <h3 style="font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h3>
+              <div class="btn-group" style="display: inline-block; margin: 0 auto;">
+                  <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Info</button></a>
+                  <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Try It</button></a>
+                  <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: #020122;">About</button></a>
+              </div>
+          </header>
+          <div class="rectangle3" style="margin: 0 auto; margin-bottom:20px;">
+            <div class="rectangle4"> <h5 style="color=#FFFFFF; font-size:24px;">space</h5> <h1>Color Choices</h1></div>
+          </div>
+          <div class="rectangle32" style="margin: 0 auto; margin-bottom:20px;">
+            <div class="rectangle4"><h5 style="color=#FFFFFF; font-size:24px;">space</h5> <h1>How It Works</h1></div>
+          </div>
+            <div class="rectangle33" style="margin: 0 auto; margin-bottom:30px;">
+            <div class="rectangle4"> <h5 style="color=#FFFFFF font-size:40px;">space</h5> <h1>Our Inspiration</h1></div>
+          </div>
         </div>
 
         <div class="scroll-area" id="Try-It" style="justify-content: center; flex-direction: column;">
-        <header class="header" style="display: flex;">
-            <h5 style="color: #FFFFFF; font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h5>
-            <div class="btn-group" style="display: inline-block; margin: 0 auto;">
-                <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">Info</button></a>
-                <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: #FFFFFF">Try It</button></a>
-                <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">About</button></a>
-            </div>
-        </header>
+          <header class="header" style="display: flex;">
+              <h5 style="color: #FFFFFF; font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h5>
+              <div class="btn-group" style="display: inline-block; margin: 0 auto;">
+                  <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">Info</button></a>
+                  <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: #FFFFFF">Try It</button></a>
+                  <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">About</button></a>
+              </div>
+          </header>
         
             <form action = "http://localhost:5000/result" method = "POST" style="margin-bottom: 20%;">
                 <label for="url" style="font-family: Raleway-Bold; color: #020122; font-size: 48px;">Enter URL: </label>
-                <input type="url" id="url" name="URL" placeholder="Enter your URL">
+                <input type="url" id="url" name="URL" placeholder="Enter the URL you would like links to be extracted from.">
 
                 <label for="time" style="font-family: Raleway-Bold; color: #020122; font-size: 48px;">Enter time: </label>
-                <input type="number" id="time" name="time" placeholder="Enter your wait time (in seconds)">
+                <input type="number" id="time" name="time" placeholder="Enter your wait time (in seconds). While you will always get all links available, a higher time allows more page titles to be found.">
 
                 <input type = "submit" value = "submit">
             </form>
-            
-        
         </div>
 
-        <div class="scroll-area">
-        <header class="header" id="Info" style="display: flex;">
-            <h3 style="font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h3>
-            <div class="btn-group" style="display: inline-block; margin: 0 auto;">
-                <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: #020122;">Info</button></a>
-                <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Try It</button></a>
-                <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">About</button></a>
-            </div>
-        </header>
+
+        <div class="scroll-area" id="Info">
+          <header class="header" style="display: flex;">
+              <h3 style="font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h3>
+              <div class="btn-group" style="display: inline-block; margin: 0 auto;">
+                  <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: #020122;">Info</button></a>
+                  <a href="#Try-It"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Try It</button></a>
+                  <a href="#More Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: rgba(0, 0, 0, 0);">Process</button></a>
+              </div>
+          </header>
+        </div>
+
+
+
+        <div class="scroll-area" id="More Info"  style="flex-direction: column;">
+          <header class="header" style="display: flex;">
+              <h5 style="color: #FFFFFF; font-size: 66px; display: inline-block; margin: 0 auto; margin-left: 3%; margin-top: 1%">AccessiLink</h5>
+              <div class="btn-group" style="display: inline-block; margin: 0 auto;">
+                  <a href="#Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">Info</button></a>
+                  <a href="#About"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #FFFFFF; background-color: rgba(0, 0, 0, 0);">About</button></a>
+                  <a href="#More Info"><button style="font-size: 48px; display: inline-block; margin: 0 auto; margin-right: 10%; color: #020122; background-color: #FFFFFF">Process</button></a>
+              </div>
+          </header>
+
+          <h1 style="font-size: 30px; margin-top: 2%; margin-bottom: 1%;"> The Design Process </h1>
+          <h5 style="color: #020122; font-size: 24px; display: inline-block; margin: 0 auto; margin-left: 1%; margin-bottom: 1%;"> Figma Frames: The Initial Design For The AccessiLink UI – Analysis on Fair Opportunity Project Website</h5>
+          <div class="imgContainer">
+            <img src="static/figma.png" alt="Figma" style="width: 53%; height: 87%; margin-bottom: 0%;">
+            <img src="static/fop.png" alt="Figma" style="width: 46%; height: 87%; margin-bottom: 0%;">
+          </div>
         </div>
     </div>
 
