@@ -17,3 +17,6 @@ We ran an analysis on the Fair Opportunity Project website for our submission, a
 
 # Challenges
 The biggest challenges was finding time and streamlining the workflow. It was one of our first hackathons, and for the other, the first itme creating this type of site, and most of the technologies were new to both of us. Additionally, conducting the initial researc into official accessibility guidelines, creating the color palette, and testing everything to make sure the site is AA-conformant was a big step we knew we had to take. However, we are proud of the site, and hope it comes in handy!
+
+# Youtube Video
+https://youtu.be/q2WfLcbZv9c
